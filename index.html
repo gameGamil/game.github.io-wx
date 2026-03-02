@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <!-- 适配移动端，避免图片在手机上显示异常 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>展示图片</title>
+    <style>
+        /* 全局样式：让页面居中，背景更舒适 */
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+            display: flex;
+            flex-direction: column; /* 改为垂直布局，容纳图片和文字 */
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: Arial, "微软雅黑", sans-serif; /* 增加中文字体适配 */
+        }
+
+        /* 图片容器：控制整体排版 */
+        .img-container {
+            text-align: center;
+            max-width: 100%;
+        }
+
+        /* 图片样式：自适应宽度，不超出屏幕，带轻微圆角和阴影 */
+        .main-img {
+            max-width: 100%;
+            max-height: 70vh; /* 调整高度，给文字留出空间 */
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px; /* 图片和文字之间增加间距 */
+        }
+
+        /* 描述文字样式 */
+        .img-desc {
+            font-size: 18px;
+            color: #333;
+            font-weight: 500;
+            line-height: 1.5;
+            padding: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="img-container">
+        <!-- 核心：图片标签，替换下面的图片地址即可 -->
+        <img class="main-img" 
+            src="https://gitee.com/LiangJinHui1/wx.indexPag/raw/master/wx.png"
+            alt="展示图片">  <!-- 图片加载失败时显示的文字 -->
+        
+        <!-- 添加的描述文字 -->
+        <p class="img-desc">保存图片，用wx扫一扫，永久获取僵尸最新兑换码</p>
+    </div>
+</body>
+</html>

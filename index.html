@@ -2,58 +2,160 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <!-- 适配移动端，避免图片在手机上显示异常 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>展示图片</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>今日抽屉 - 隐私政策与支持</title>
     <style>
-        /* 全局样式：让页面居中，背景更舒适 */
+        /* 极简苹果风全局样式 */
         body {
             margin: 0;
-            padding: 20px;
-            background-color: #f5f5f5;
+            padding: 40px 20px;
+            background-color: #f5f5f7;
             display: flex;
-            flex-direction: column; /* 改为垂直布局，容纳图片和文字 */
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
-            min-height: 100vh;
-            font-family: Arial, "微软雅黑", sans-serif; /* 增加中文字体适配 */
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: #1d1d1f;
         }
 
-        /* 图片容器：控制整体排版 */
-        .img-container {
+        /* 顶部 App 标题 */
+        .app-header {
             text-align: center;
-            max-width: 100%;
+            margin-bottom: 30px;
         }
 
-        /* 图片样式：自适应宽度，不超出屏幕，带轻微圆角和阴影 */
-        .main-img {
-            max-width: 100%;
-            max-height: 70vh; /* 调整高度，给文字留出空间 */
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px; /* 图片和文字之间增加间距 */
+        .app-title {
+            font-size: 28px;
+            font-weight: 700;
+            margin: 0;
+            color: #1d1d1f;
+            letter-spacing: 0.5px;
         }
 
-        /* 描述文字样式 */
-        .img-desc {
-            font-size: 18px;
-            color: #333;
+        .app-subtitle {
+            font-size: 15px;
+            color: #86868b;
+            margin-top: 8px;
+        }
+
+        /* 纯白卡片容器 */
+        .content-card {
+            background-color: #ffffff;
+            border-radius: 18px;
+            padding: 40px 30px;
+            max-width: 680px;
+            width: 100%;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+            box-sizing: border-box;
+            line-height: 1.6;
+        }
+
+        /* 内容排版 */
+        h1 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-top: 0;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #e5e5ea;
+        }
+
+        h2 {
+            font-size: 17px;
+            font-weight: 600;
+            color: #1d1d1f;
+            margin-top: 30px;
+            margin-bottom: 12px;
+        }
+
+        p {
+            font-size: 15px;
+            color: #515154;
+            margin-bottom: 16px;
+        }
+
+        .highlight {
+            font-weight: 600;
+            color: #1d1d1f;
+        }
+
+        /* 底部联系方式块 */
+        .support-box {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #f5f5f7;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .support-box p {
+            margin: 0 0 10px 0;
+            color: #1d1d1f;
             font-weight: 500;
-            line-height: 1.5;
-            padding: 0 10px;
+        }
+
+        .support-box a {
+            display: inline-block;
+            color: #0066cc;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            padding: 8px 16px;
+            background-color: #e8f2fc;
+            border-radius: 20px;
+            transition: all 0.2s ease;
+        }
+
+        .support-box a:hover {
+            background-color: #d1e6fa;
+        }
+
+        /* 页脚 */
+        .footer {
+            margin-top: 30px;
+            font-size: 13px;
+            color: #86868b;
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    <div class="img-container">
-        <!-- 核心：图片标签，替换下面的图片地址即可 -->
-        <img class="main-img" 
-            src="https://cdn-hk.xhgamesdk.com/gm/role/imgs/9b2d5c725499e46ea98dfa0f29de303c.jpg?t=1772787001"
-            alt="展示图片">  <!-- 图片加载失败时显示的文字 -->
-        
-        <!-- 添加的描述文字 -->
-        <p class="img-desc">保存图片，用wx扫一扫，永久获取僵尸最新兑换码</p>
-        <p class="img-desc">如果不想保存图片，可以打开wx，小程序搜索：僵尸扶持码</p>
+
+    <!-- 顶部标题 -->
+    <div class="app-header">
+        <h1 class="app-title">今日抽屉</h1>
+        <div class="app-subtitle">永远不上网的私人情绪抽屉</div>
     </div>
+
+    <!-- 核心条款卡片 -->
+    <div class="content-card">
+        <h1>隐私政策 (Privacy Policy)</h1>
+        
+        <p>更新日期：2023年10月</p>
+        <p>感谢您信任并使用「今日抽屉」。我们深知情绪与日记是您最私密的信息，因此，我们从应用设计的底层架构上，就确立了<strong>“纯本地、零收集”</strong>的核心原则。</p>
+
+        <h2>1. 数据的收集与使用</h2>
+        <p>「今日抽屉」是一款完全离线运行的应用程序。我们<span class="highlight">不会在后台收集、监控、分析或上传您的任何个人信息</span>（包括但不限于您的设备信息、位置信息、输入的日记文本、选择的心情状态等）。应用内没有接入任何第三方数据分析 SDK 或广告 SDK。</p>
+
+        <h2>2. 数据的存储与安全</h2>
+        <p>您在应用内产生的所有数据，均仅以加密形式存储在您当前的手机设备本地沙盒中。即使您设置了应用的“隐私密码”，该密码也仅在本地进行校验，不会发送至任何服务器。</p>
+        <p><strong>⚠️ 重要提示：</strong> 由于我们没有云端服务器为您提供备份服务，如果您卸载本应用，iOS 系统将彻底清除该应用的所有本地数据，且无法恢复。请妥善保管您的隐私密码，并在需要时通过系统级备份（如 iCloud 整机备份）来保护您的数据。</p>
+
+        <h2>3. 设备权限调用说明</h2>
+        <p>本应用可能需要向您申请<strong>“通知 (Notifications)”</strong>权限。该权限仅用于为您提供每天的本地记日记提醒服务。所有的定时推送均由您的手机系统在本地触发，绝不依赖任何远程推送服务器。</p>
+
+        <h2>4. 政策变更</h2>
+        <p>随着产品功能的迭代，我们可能会不时更新本隐私政策。但请您放心，“永远不收集用户隐私数据”是我们对您不变的承诺。任何政策变更都会在此页面进行公示。</p>
+        
+        <div class="support-box">
+            <p>技术支持与反馈 (Support)</p>
+            <!-- ⬇️ 记得把这里换成你的真实邮箱 ⬇️ -->
+            <a href="mailto:your_email@qq.com">发送邮件至：your_email@qq.com</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy; 2023 今日抽屉. All rights reserved.
+    </div>
+
 </body>
 </html>
